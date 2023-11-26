@@ -1,0 +1,66 @@
+:root {
+    --main-background-color: #FAFAF9;
+    --main-background-card-color: #FFFFFF;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    background-color: var(--main-background-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1280px;
+    padding: 64px;
+}
+
+.rewiewers, .cards {
+    max-width: 50%;
+    min-width: 50%;
+}
+
+.rewiewers {
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-size: 2.25rem;
+}
+
+.container p {
+    font-size: 1.25rem;
+}
+
+.container ul {
+    font-size: 0.875rem;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 190px 190px;
+    gap: 40px;
+}
+.google-card, .meta-card {
+    background-color: var(--main-background-card-color);
+}
+
+.google-card {
+    grid-column: 2 / 4;
+}
+.meta-card {
+    grid-column: 1 / 3;
+}
