@@ -1,61 +1,113 @@
 :root {
     --main-background-color: #FAFAF9;
     --main-background-card-color: #FFFFFF;
+    --main-text-color: #52525A;
 
 }
 
+* {
+    box-sizing: border-box;
+}
 body {
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Sora', sans-serif;
+    color: var(--main-text-color);
     background-color: var(--main-background-color);
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    width: 1280px;
-    padding: 64px;
-}
-
-.rewiewers, .cards {
-    max-width: 50%;
-    min-width: 50%;
+    gap: 33px;
+    max-width: 1280px;
+    padding: 70px;
+    margin: auto;
 }
 
 .rewiewers {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
+
+.circleStar-img {
+    max-width: 45px;
+    min-width: 45px;
+    z-index: 1;
+}
+
 h1 {
+    color: black;
     font-size: 2.25rem;
+    margin: 15px 0;
 }
 
 .container p {
     font-size: 1.25rem;
+    line-height: 2.2rem;
+    margin-top: 0;
 }
 
 .container ul {
     font-size: 0.875rem;
     padding: 0;
+    margin: 15px 0 0 0;
 }
 
 li {
     display: flex;
     align-items: center;
     list-style-type: none;
+    margin-top: 10px;
+}
+
+.liImg {
+    margin-right: 10px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 190px 190px;
-    gap: 40px;
+    grid-template-rows: 50% 50%;
+    gap: 30px;
+    /* padding: 10px 0; */
 }
-.google-card, .meta-card {
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    padding: 30px 40px;
     background-color: var(--main-background-card-color);
+    border-radius: 10px;
+}
+
+.head-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+.card h2 {
+    font-size: 1rem;
+    margin: 15px 0 5px 0;
+    color: black;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0;
+}
+.card-img {
+    max-width: 90px;
+    margin-right: 15px;
 }
 
 .google-card {
@@ -63,4 +115,5 @@ li {
 }
 .meta-card {
     grid-column: 1 / 3;
+    /* grid-row: 2 / 3; */
 }
