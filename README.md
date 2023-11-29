@@ -2,6 +2,8 @@
 
 This project is part of the 1st exercise of the Responsive Web Developer course on [devChallenges](https://devchallenges.io/).
 
+*No contribution needed*
+
 To participate:
 * Got to [devchallenges.io](https://devchallenges.io/) 
 * Create account
